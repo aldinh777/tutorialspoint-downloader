@@ -5,7 +5,7 @@ var router = express.Router();
 
 router.get('/', (req, res)=> {
   fs.readdir('www.tutorialspoint.com', (err, files)=> {
-    res.render('index', {files: files});
+    res.render('index', {files});
   });
 });
 
