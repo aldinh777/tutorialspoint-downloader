@@ -4,15 +4,15 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var childProcess = require('child_process');
+var debug = require('debug')('tutorialsdownloader:wget');
 
 var indexRouter = require('./routes/index');
-var chatRouter = require('./routes/chat');
 
 var app = express();
 var wgetBusy = false;
 var wgetClose = (code)=> {
   wgetBusy = false;
-  console.log("Wget Closed With Code : "+code);
+  debug("Closed With Code : "+code);
 }
 
 // view engine setup
@@ -27,10 +27,8 @@ app.use(express.static(path.join(__dirname, 'www.tutorialspoint.com'), {
   index: ['index.html', 'index.htm'],
   lastModified: true
 }));
-app.use('/LearningDir', express.static(path.join(__dirname, 'LearningDir')));
 
 app.use('/', indexRouter);
-app.use('/chat', chatRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -45,12 +43,13 @@ app.use(function(err, req, res, next) {
 
   // Wget Integration
   if(wgetBusy) {
-    console.log('Debug::busy wgetBusy:'+wgetBusy);
+    debug('status : busy | wgetBusy:'+wgetBusy);
   }
   else {
+    const wgetQuery = 'wget -np -r -p -k -U "Mozilla Firefox" -e robots=off https://www.tutorialspoint.com';
     const path = (req.path[req.path.length - 1] == '/') ? req.path+'index.htm' : req.path;
-    console.log('Debug::file wgetBusy:'+wgetBusy);
-    childProcess.exec('wget -np -r -p -k -U "Mozilla Firefox" -e robots=off https://www.tutorialspoint.com'+path).on('close', ()=> {
+    debug('status : file | wgetBusy:'+wgetBusy);
+    childProcess.exec(wgetQuery + path).on('close', ()=> {
         childProcess.exec('ruby bin/wgetfixer.rb '+req.path).on('close', wgetClose);
     });
     wgetBusy = true;

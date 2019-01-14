@@ -47,12 +47,11 @@ div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.foo
 .ace_scroller{overflow: auto!important;}
 a.demo{font-family: "Open Sans",Arial,sans-serif; background:#316441; color:#fff; font-size:13px; padding:3px 10px; border:1px solid #d6d6d6; position:absolute; right:5px; margin:-6px 17px 0px 0px;}
 a.demo:hover{opacity:.8}
-/* <% files.forEach((file)=>{  %> */
-  li a[href="/<%= file %>/"]{
-  background-color: lightgreen;
-  text-decoration: underline overline;
+<% files.forEach((file)=>{  %>
+li a[href="/<%= file.path %>/"]{
+  background-color: <%= file.color %>;
 }
-/* <%}); %> */
+<%}); %>
 </style>
 <script>
 $(document).ready(function() {

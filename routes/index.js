@@ -4,31 +4,49 @@ var fs = require('fs');
 var router = express.Router();
 
 router.get('/', (req, res)=> {
-  fs.readdir('www.tutorialspoint.com', (err, files)=> {
-    res.render('index', {files});
+  const dirContent = fs.readdirSync('www.tutorialspoint.com');
+  if ( !fs.existsSync('completed-tutorials.json') ) {
+    fs.writeFileSync('completed-tutorials.json', '[]');
+  }
+  const data = fs.readFileSync('completed-tutorials.json');
+  const completed = JSON.parse(data.toString());
+  const files = dirContent.map((path) => {
+    let color = 'lightgreen';
+    completed.forEach((data) => {
+      if (data.path === path) {
+        color = 'orange';
+      }
+    });
+    return {
+      path, color,
+    };
   });
+  res.render('index', {files});
 });
 
-router.get('/done', (req, res)=> {
+router.get('/:tutors/done', (req, res) => {
   if(req.query.q) {
-    if ( fs.existsSync('Completed_Tutorials.md') )
-      fs.appendFileSync('Completed_Tutorials.md', '- '+req.query.q+'\r\n');
-    else
-      fs.writeFileSync('Completed_Tutorials.md', req.query.q+'\r\n');
-    res.redirect('/completed');
+    if ( !fs.existsSync('completed-tutorials.json') ) {
+      fs.writeFileSync('completed-tutorials.json', '[]');
+    }
+    const data = fs.readFileSync('completed-tutorials.json');
+    const name = req.query.q;
+    const path = req.params.tutors;
+    const oldArray = JSON.parse(data.toString());
+    const newArray = oldArray.concat({ name, path });
+    fs.writeFileSync('completed-tutorials.json', JSON.stringify(newArray));
   }
-  else {
-    res.redirect('/completed');
-  }
+  res.redirect('/completed');
 });
 
 router.get('/completed', (req, res)=> {
-  if ( fs.existsSync('Completed_Tutorials.md') ) {
-    fs.readFile('Completed_Tutorials.md', (err, data)=> {
-      res.send('<pre>'+data+'</pre>');
-    });    
+  if ( fs.existsSync('completed-tutorials.json') ) {
+    const data = fs.readFileSync('completed-tutorials.json');
+    const arrayOfData = JSON.parse(data.toString());
+    res.send(arrayOfData);
   } else {
-    res.send('<pre></pre>');
+    fs.writeFileSync('completed-tutorials.json', '[]');
+    res.redirect('/completed');
   }
 });
 
