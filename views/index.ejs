@@ -8,6 +8,7 @@
 <title>Free Online Tutorials and Courses</title>
 <meta name="Description" content="Free Online Tutorials and Courses - Collection of technical and non technical, Free tutorials and reference manuals with examples for Java8, XStream, Scrum, Guava, Memcached, Neo4J, CICS, Fortran, EasyMock, Object Oriented Analysis & Design, Tika, DOM, AngularJS, IMS-DB, NGN, Sed, WCF, JPA, Apache POI, Signals and Systems, JOGL, DB2, PhoneGap, SVG, VSAM, COBOL, XSD, XPath, Redis, Java XML, VBA, JFreeChart, Lucene, Selenium , DTD, Powerpoint, Tcl/Tk, XML, Software Engineering and many more latest technologies"/>
 <meta name="Keywords" content="Free, Online, Tutorials, Courses, XStream, Java8, Scrum, Guava, Memcached, Neo4J, CICS, EasyMock, Object, Oriented, Analysis, Design, Tika, AngularJS, IMS-DB, NGN, Sed, WCF, JPA, Apache POI, Signals and Systems, JOGL, DB2, PhoneGap, SVG, VSAM, COBOL, XSD, XPath, Redis, XSLT, Java XML, VBA, JFreeChart, Lucene, Selenium, DTD, Powerpoint, Tcl/tk, Software Engineering, XML, jQueryUI, QC, Latest, Technologies, Free,  Tutorials, References, Examples"/>
+<base href="/" />
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
 <meta property="og:locale" content="en_US" />
@@ -38,6 +39,53 @@ function close_obs_sidenav(){
 <link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
 <![endif]-->
 <style>
+#privacy-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem .5rem;
+    background: #fff;
+    z-index: 1030;
+    color: #000;
+    font-size: 14px;
+    margin: 0;
+    display: none;
+    border-top: 2px solid rgb(130, 130, 130);
+  }
+  #privacy-banner p {
+    margin: 0;
+    color: #000;
+    text-align: center;
+  }
+  #privacy-banner a {
+    text-decoration: none;
+    margin: 20px auto 0 auto;
+    display: block;
+    max-width: 150px;
+  }
+  #privacy-banner a:hover {
+    text-decoration: underline;
+  }
+  #banner-learn {
+    color: #000;
+  }
+  #banner-accept {
+    padding: 7px 15px;
+    color: #fff;
+    border-radius: 5px;
+    background:#737373 !important;
+  }
+  @media (min-width: 768px) {
+    #privacy-banner {
+      padding: 1.5rem .5rem;
+    }
+    #privacy-banner a {
+      display: inline-block;
+      margin: 0 10px;
+    }
+}
 select{ border:0 !important; outline: 1px inset black !important; outline-offset: -1px !important; }
 .btnsbmt{ background: #316441 !important;}
 ul.nav-list.primary>li a.videolink{    background: none; margin: 0px; padding: 0px; border: 1px solid #d6d6d6;}
@@ -74,7 +122,7 @@ $(document).ready(function() {
 <header>
    <div class="container">			
       <h1 class="logo">
-      <a href="" title="tutorialspoint">
+      <a href="/" title="tutorialspoint">
       <img alt="tutorialspoint" src="/green/images/logo.png">
       </a>
       </h1>			
@@ -111,7 +159,7 @@ $(document).ready(function() {
       <div class="container">
          <nav class="nav-main mega-menu">
             <ul class="nav nav-pills nav-main" id="mainMenu">
-               <li class="dropdown no-sub-menu"> <a class="dropdown" href=""><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown no-sub-menu"> <a class="dropdown" href="/"><i class="icon icon-home"></i> Home</a> </li>   
                <li class="dropdown no-sub-menu"><a class="dropdown" href="/questions/index.php"><i class="fa fa-send"></i> Q/A </a> </li>
                <li class="dropdown"><a class="dropdown" href="tutorialslibrary.htm"><span class="tut-lib"> Library </span></a></li>
                <li class="dropdown no-sub-menu"><a class="dropdown" href="videotutorials/"><i class="fa-toggle-right"></i> Videos </a></li>
@@ -201,6 +249,8 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/ant/" title="Learn Apache ANT">Learn Apache Ant</a></li>
 <li><a  href="/commons_collections/" title="Apache Common Collection">Learn Apache Common Collection</a></li>
 <li><a  href="/commons_io/" title="Apache Common IO">Learn Apache Common IO</a></li>
+<li><a  href="/apache_httpclient/" title="Learn Apache HTTP Client">Learn Apache HTTP Client</a></li>
+<li><a  href="/apache_nifi/" title="Learn Apache NiFi">Learn Apache NiFi</a></li>
 <li><a  href="/apache_poi_ppt/" title="Learn Apache POI (Powerpoint)">Learn Apache POI (Powerpoint)</a></li>
 <li><a  href="/apache_poi_word/" title="Learn Apache POI (Word)">Learn Apache POI (Word)</a></li>
 <li><a  href="/apache_poi/" title="Learn Apache POI">Learn Apache POI</a></li>
@@ -232,6 +282,7 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/java_i18n/" title="Learn Java Internalization">Java Internalization</a></li>
 <li><a  href="/java/java_interview_questions.htm" title="Java Interview Questions">Java Interview Questions</a></li>
 <li><a  href="/java/lang/" title="Learn Java.lang Package">Java.lang Package</a></li>
+<li><a  href="/java_nio/" title="Learn Java Nio">Learn Java Nio</a></li>
 <li><a  href="/javareflect/" title="Learn Java.reflect Package">Java.reflect Package</a></li>
 <li><a  href="/javaregex/" title="Learn Java Regex">Learn Java Regex</a></li>
 <li><a  href="/javatime/" title="Learn Java.time Package">Java.time Package</a></li>
@@ -244,6 +295,7 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/javaexamples/" title="Java  Examples">Java Examples</a></li>
 <li><a  href="/javafx/" title="Learn JavaFx">Learn JavaFx</a></li>
 <li><a  href="/javamail_api/" title="Learn JavaMail API">Learn JavaMail API</a></li>
+<li><a  href="/java_virtual_machine/" title="Learn Java Virtual Machine">Learn Java Virtual Machine</a></li>
 <li><a  href="/jbpm5/" title="Learn Jbpm5">Learn Jbpm5</a></li>
 <li><a  href="/jdb/" title="Learn JDB">Learn JDB</a></li>
 <li><a  href="/jdbc/" title="Learn JDBC">Learn JDBC</a></li>
@@ -259,7 +311,9 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/lucene/" title="Learn Lucene">Learn Lucene</a></li>
 <li><a  href="/maven/" title="Learn Maven">Learn Maven</a></li>
 <li><a  href="/pdfbox/" title="Learn PDFbox">Learn PDFbox</a></li>
+<li><a  href="/rxjava/" title="Learn RxJava">Learn RxJava</a></li>
 <li><a  href="/servlets/" title="Learn Servlets">Learn Servlets</a></li>
+<li><a  href="/slf4j/" title="Learn SLF4J">Learn SLF4J</a></li>
 <li><a  href="/spring/" title="Learn Spring">Learn Spring</a></li>
 <li><a  href="/springaop/" title="Learn Spring AOP">Learn Spring AOP</a></li>
 <li><a  href="/spring_batch/" title="Learn Spring Batch">Learn Spring Batch</a></li>
@@ -270,6 +324,7 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/springws/" title="Learn Spring Web Services">Learn Spring Web Services</a></li>
 <li><a  href="/struts_2/" title="Learn Struts 2">Learn Struts 2.x</a></li>
 <li><a  href="/swing/" title="Learn Swing">Learn Swing</a></li>
+<li><a  href="/swingexamples/" title="Learn Swing Examples">Learn Swing Examples</a></li>
 <li><a  href="/testng/" title="Learn TestNG">Learn TestNG</a></li>
 <li><a  href="/tika/" title="Learn Apache Tika">Learn Apache Tika</a></li>
 <li><a  href="/xerces/" title="Learn Apache Xerces">Learn Apache Xerces</a></li>
@@ -300,6 +355,7 @@ You are  browsing the best resource for <em>Online Education.</em>
 <h4>Databases</h4>
 <ul class="menu" id="database_tutorials" data-href="database_tutorials.htm">
 <li><a  href="/amazonrds/" title="Learn Amazon RDS">Learn Amazon RDS</a></li>
+<li><a  href="/apache_derby/" title="Learn Apache Derby">Learn Apache Derby</a></li>
 <li><a  href="/arangodb/" title="Learn ArangoDB">Learn ArangoDB</a></li>
 <li><a  href="/apache_presto/" title="Learn Apache Presto">Learn Apache Presto</a></li>
 <li><a  href="/couchdb/" title="Learn CouchDB">Learn CouchDB</a></li>
@@ -322,6 +378,7 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/postgresql/" title="Learn PostgreSQL">Learn PostgreSQL</a></li>
 <li><a  href="/pouchdb/" title="Learn PouchDB">Learn PouchDB</a></li>
 <li><a  href="/redis/" title="Learn Redis">Learn Redis</a></li>
+<li><a  href="/sqlalchemy/" title="SQLAlchemy">SQLAlchemy</a></li>
 <li><a  href="/sql_certificate/" title="SQL Certification">SQL Certification</a></li>
 <li><a  href="/sql/" title="Learn SQL">Learn SQL</a></li>
 <li><a  href="/sqlite/" title="Learn SQLite">Learn SQLite</a></li>
@@ -344,8 +401,11 @@ You are  browsing the best resource for <em>Online Education.</em>
 </ul>
 <h4>Python Technologies</h4>
 <ul class="menu" id="python_technologies" data-href="python_technologies_tutorials.htm">
+<li><a  href="/artificial_intelligence_with_python/" title="Learn Artificial Intelligence with Python">Artificial Intelligence with Python</a></li>
+<li><a  href="/biopython/" title="Learn BioPython">Learn BioPython</a></li>
 <li><a  href="/concurrency_in_python/" title="Learn Concurrency with Python">Learn Concurrency with Python</a></li>
 <li><a  href="/cryptography_with_python/" title="Learn Cryptography with Python">Learn Cryptography with Python</a></li>
+<li><a  href="/jupyter/" title="Jupyter">Learn Jupyter</a></li>
 <li><a  href="/jython/" title="Jython">Learn Jython</a></li>
 <li><a  href="/machine_learning_with_python/" title="Learn Machine Learning with Python">Machine Learning with Python</a></li>
 <li><a  href="/numpy/" title="Learn Numpy">Learn Numpy</a></li>
@@ -355,6 +415,7 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/python/" title="Learn Python">Learn Python</a></li>
 <li><a  href="/python3/" title="Learn Python-3">Learn Python-3</a></li>
 <li><a  href="/pycharm/" title="Learn PyCharm">Learn PyCharm</a></li>
+<li><a  href="/python_blockchain/" title="Python Blockchain">Python Blockchain</a></li>
 <li><a  href="/python_deep_learning/" title="Python Deep Learning">Python Deep Learning</a></li>
 <li><a  href="/python_design_patterns/" title="Python Design Pattern">Python Design Pattern</a></li>
 <li><a  href="/python_digital_forensics/" title="Learn Python Digital Forensics ">Learn Python Digital Forensics</a></li>
@@ -362,10 +423,12 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/python/python_data_structure.htm" title="Learn Python Data Structure">Learn Python Data Structure</a></li>
 <li><a  href="/python/python_data_science.htm" title="Learn Python Data Science">Learn Python Data Science</a></li>
 <li><a  href="/python/python_network_programming.htm" title="Learn Python Network Programming">Learn Python Network Programming</a></li>
+<li><a  href="/pytest/" title="Learn PyTest">Learn PyTest</a></li>
+<li><a  href="/pytorch/" title="Learn PyTorch">Learn PyTorch</a></li>
 <li><a  href="/python/python_text_processing.htm" title="Learn Python Text Processing">Learn Python Text Processing</a></li>
-<li><a  href="/artificial_intelligence_with_python/" title="Learn Artificial Intelligence with Python">Artificial Intelligence with Python</a></li>
 <li><a  href="/python_forensics/" title="Learn Python Forensics">Learn Python Forensics</a></li>
 <li><a  href="/python_pandas/" title="Learn Python Panda">Learn Python Panda</a></li>
+<li><a  href="/python_web_development_libraries/" title="Learn Python Web Development Libraries">Learn Python Web Development Libraries</a></li>
 <li><a  href="/pyspark/" title="Learn PySpark">Learn PySpark</a></li>
 <li><a  href="/seaborn/" title="Learn Seaborn">Learn Seaborn</a></li>
 <li><a  href="/scipy/" title="Learn Scipy">Learn Scipy</a></li>
@@ -570,6 +633,7 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/r/" title="Learn R Programming">Learn R Programming</a></li>
 <li><a  href="/sas/" title="Learn SAS">Learn SAS</a></li>
 <li><a  href="/spark_sql/" title="Learn Spark SQL">Learn Spark SQL</a></li>
+<li><a  href="/splunk/" title="Learn Splunk">Learn Splunk</a></li>
 <li><a  href="/sqoop/" title="Learn Sqoop">Learn Sqoop</a></li>
 <li><a  href="/statistics/" title="Learn Statistics">Learn Statistics</a></li>
 <li><a  href="/tableau/" title="Learn Tableau">Learn Tableau</a></li>
@@ -684,9 +748,7 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/chemistry_part2/" title="Chemistry Part 2">Chemistry Part 2</a></li>
 <li><a  href="/physics_part1/" title="Physics Part 1">Physics Part 1</a></li>
 <li><a  href="/physics_part2/" title="Physics Part 2">Physics Part 2</a></li>
-<li><a  href="/current_affairs_2016/" title="Current Affairs 2016">Current Affairs 2016</a></li>
-<li><a  href="/current_affairs_2017/" title="Current Affairs 2017">Current Affairs 2017</a></li>
-<li><a  href="/current_affairs_2018/" title="Current Affairs 2018">Current Affairs 2018</a></li>
+<li><a  href="/current_affairs/" title="Current Affairs">Current Affairs</a></li>
 <li><a  href="/quantitative_aptitude/" title="Quantitative Aptitude">Quantitative Aptitude Tutorial</a></li>
 <li><a  href="/geography/" title="Geography Tutorial">Geography Tutorial</a></li>
 <li><a  href="/indian_economy/" title="Indian Economy Tutorial">Indian Economy Tutorial</a></li>
@@ -746,9 +808,13 @@ You are  browsing the best resource for <em>Online Education.</em>
 <ul class="menu" id="web_development" data-href="web_development_tutorials.htm">
 <li><a  href="/ajax/" title="Learn Ajax">Learn Ajax</a></li>
 <li><a  href="/amazon_web_services/" title="Learn Amazon Web Services">Learn Amazon Web Services</a></li>
+<li><a  href="/angular_googlecharts/" title="Learn Angular Google Charts">Learn Angular Google Charts</a></li>
+<li><a  href="/angular_highcharts/" title="Learn Angular High Charts">Learn Angular High Charts</a></li>
 <li><a  href="/angular_material/" title="Learn Angular Material">Learn Angular Material</a></li>
+<li><a  href="/angular_material7/" title="Learn Angular Material 7">Learn Angular Material 7</a></li>
 <li><a  href="/angular2/" title="Learn Angular2">Learn Angular2</a></li>
 <li><a  href="/angular4/" title="Learn Angular4">Learn Angular4</a></li>
+<li><a  href="/angular6/" title="Learn Angular6">Learn Angular6</a></li>
 <li><a  href="/angularjs/" title="Learn AngularJS">Learn AngularJS</a></li>
 <li><a  href="/apache_tapestry/" title="Learn Apache Tapestry">Learn Apache Tapestry</a></li>
 <li><a  href="/asp.net/" title="Learn ASP.Net">Learn ASP.Net</a></li>
@@ -756,6 +822,7 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/axure_rp/" title="Learn Axure RP">Learn Axure RP</a></li>
 <li><a  href="/aws_lambda/" title="Learn AWS Lambda">Learn AWS Lambda</a></li>
 <li><a  href="/babeljs/" title="Learn BabelJS">Learn BabelJS</a></li>
+<li><a  href="/babylonjs/" title="Learn BabylonJS">Learn BabylonJS</a></li>
 <li><a  href="/backbonejs/" title="Learn BackboneJS">Learn BackboneJS</a></li>
 <li><a  href="/bootstrap/" title="Learn Bootstrap">Learn Bootstrap</a></li>
 <li><a  href="/bootstrap4/" title="Learn Bootstrap 4">Learn Bootstrap 4</a></li>
@@ -816,10 +883,14 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/parallax_scrolling_in_web_design/" title="Learn Srallax Scrolling">Learn Parallax Scrolling</a></li>
 <li><a  href="/phantomjs/" title="Learn PhantomJS">Learn PhantomJS</a></li>
 <li><a  href="/phalcon/" title="Learn Phalcon">Learn Phalcon</a></li>
+<li><a  href="/php/" title="Learn PHP">Learn PHP</a></li>
+<li><a  href="/php7/" title="Learn PHP-7">Learn PHP-7</a></li>
 <li><a  href="/prototype/" title="Learn Prototype Framework">Learn Prototype</a></li>
 <li><a  href="/polymer/" title="Learn Polymer Framework">Learn Polymer</a></li>
 <li><a  href="/purecss/" title="Learn Pure.CSS">Learn Pure.CSS</a></li>
+<li><a  href="/redux/" title="Learn Redux">Learn Redux</a></li>
 <li><a  href="/richfaces/" title="Learn RichFaces">Learn RichFaces</a></li>
+<li><a  href="/riotjs/" title="Learn RIOT.JS">Learn RIOT.JS</a></li>
 <li><a  href="/reactjs/" title="Learn ReactJS">Learn ReactJS</a></li>
 <li><a  href="/requirejs/" title="Learn RequireJS">Learn RequireJS</a></li>
 <li><a  href="/restful/" title="RESTful Web Services">RESTful Web Services</a></li>
@@ -907,6 +978,7 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/biometrics/" title="Learn biometrics">Learn Biometrics</a></li>
 <li><a  href="/cloud_computing/" title="Learn Cloud Computing">Learn Cloud Computing</a></li>
 <li><a  href="/compiler_design/" title="Learn Compiler Design">Learn Compiler Design</a></li>
+<li><a  href="/computer_concepts/" title="Learn Course on Computer Concepts">Learn Computer Concepts</a></li>
 <li><a  href="/computer_fundamentals/" title="Learn Computer Fundamentals">Learn Computer Fundamentals</a></li>
 <li><a  href="/computer_graphics/" title="Learn Computer Graphics">Learn Computer Graphics</a></li>
 <li><a  href="/computer_logical_organization/" title="Learn Computer Logical Organization">Computer Logical Organization</a></li>
@@ -962,6 +1034,7 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/mobile_computing/" title="Learn Mobile Computing">Learn Mobile Computing</a></li>
 <li><a  href="/mobile_learning_essentials/" title="Mobile Learning Essentials">Mobile Learning Essentials</a></li>
 <li><a  href="/modelling_and_simulation/" title="Modelling and Simulation">Modelling and Simulation</a></li>
+<li><a  href="/natural_language_processing/" title="Natural Language Processing">Natural Language Processing</a></li>
 <li><a  href="/network_theory/" title="Network Theory">Learn Network Theory</a></li>
 <li><a  href="/object_oriented_analysis_design/" title="Learn Object Oriented Analysis and Design">Learn OOAD</a></li>
 <li><a  href="/opennlp/" title="Learn OpenNLP">Learn OpenNLP</a></li>
@@ -974,6 +1047,7 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/principles_of_communication/" title="Principles of Communication">Principles of Communication</a></li>
 <li><a  href="/programming_methodologies/" title="Programming Methodologies">Programming Methodologies</a></li>
 <li><a  href="/pulse_circuits/" title="Pulse Circuits">Pulse Circuits</a></li>
+<li><a  href="/radar_systems/" title="Radar Systems">Radar Systems</a></li>
 <li><a  href="/renewable_energy/" title="Renewable Energy">Renewable Energy</a></li>
 <li><a  href="/satellite_communication/" title="Learn Satellite Communication">Satellite Communication</a></li>
 <li><a  href="/sdlc/" title="Learn SDLC (Software Development Life Cycle)">S/W Development Life Cycle (SDLC)</a></li>
@@ -1015,6 +1089,7 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/mobile_testing/" title="Learn Mobile Testing">Learn Mobile Testing</a></li>
 <li><a  href="/mockito/" title="Learn Mockito">Learn Mockito</a></li>
 <li><a  href="/network_security/" title="Learn Network Security">Learn Network Security</a></li>
+<li><a  href="/protractor/" title="Learn Protractor">Learn Protractor</a></li>
 <li><a  href="/penetration_testing/" title="Learn Penetration Testing">Learn Penetration Testing</a></li>
 <li><a  href="/python_penetration_testing/" title="Learn Python Penetration Testing">Python Penetration Testing</a></li>
 <li><a  href="/qc/" title="Learn QC">Learn QC</a></li>
@@ -1022,6 +1097,7 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/qunit/" title="Learn QUnit">Learn QUnit</a></li>
 <li><a  href="/qtest/" title="Learn QTest">Learn QTest</a></li>
 <li><a  href="/rspec/" title="Learn RSpec">Learn RSpec</a></li>
+<li><a  href="/robot_framework/" title="Learn Robot Framework">Learn Robot Framework</a></li>
 <li><a  href="/sap_testing/" title="Learn SAP Testing">Learn SAP Testing</a></li>
 <li><a  href="/security_testing/" title="Learn Security Testing">Learn Security Testing</a></li>
 <li><a  href="/selenium/" title="Learn Selenium">Learn Selenium</a></li>
@@ -1121,6 +1197,7 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/crystal_reports/" title="Learn Crystal Reports">Learn Crystal Reports</a></li>
 <li><a  href="/sap_abap/" title="Learn SAP ABAP">Learn SAP ABAP</a></li>
 <li><a  href="/sap_apo/" title="Learn SAP APO">Learn SAP APO</a></li>
+<li><a  href="/sap_ariba/" title="Learn SAP Ariba">Learn SAP Ariba</a></li>
 <li><a  href="/sap_bex/" title="Learn SAP Bex">Learn SAP Bex</a></li>
 <li><a  href="/sap_basis/" title="Learn SAP BASIS">Learn SAP BASIS</a></li>
 <li><a  href="/sap_bods/" title="Learn SAP BODS">Learn SAP BODS</a></li>
@@ -1131,6 +1208,7 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/sap_bw/" title="Learn SAP BW">Learn SAP BW</a></li>
 <li><a  href="/sap_c4c/" title="Learn SAP C4C">Learn SAP C4C</a></li>
 <li><a  href="/sap_cca/" title="Learn SAP CCA">Learn SAP CCA</a></li>
+<li><a  href="/sap_cloud_platform/" title="Learn SAP Cloud Platform">Learn SAP Cloud Platform</a></li>
 <li><a  href="/sap_crm/" title="Learn SAP CRM">Learn SAP CRM</a></li>
 <li><a  href="/sap_dashboards/" title="Learn SAP Dashboards">Learn SAP Dashboards</a></li>
 <li><a  href="/sap_design_studio/" title="Learn SAP Design Studio">Learn SAP Design Studio</a></li>
@@ -1165,6 +1243,7 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/sap_successfactors/" title="Learn SAP SuccessFactors">Learn SAP SuccessFactors</a></li>
 <li><a  href="/sap_testing/" title="Learn SAP Testing">Learn SAP Testing</a></li>
 <li><a  href="/sap_ui5/" title="Learn SAP UI5">Learn SAP UI5</a></li>
+<li><a  href="/sap_universe_designer/" title="Learn SAP Universe Designer">Learn SAP Universe Designer</a></li>
 <li><a  href="/sap_web_dynpro/" title="Learn SAP Web Dynpro">Learn SAP Web Dynpro</a></li>
 <li><a  href="/sap_webi/" title="Learn SAP Webi">Learn SAP Webi</a></li>
 <li><a  href="/sap/" title="Learn SAP R/3">Learn SAP R/3</a></li>
@@ -1229,7 +1308,7 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/workplace_wellness/" title="Learn Workplace Wellness">Learn Workplace Wellness</a></li>
 </ul>
 <h4>Selected Reading</h4>
-<ul class="menu" id="selected_reading" data-href="">
+<ul class="menu" id="selected_reading" data-href="/">
 <li><a  href="computer_glossary.htm">Computer Glossary</a></li>
 <li><a  href="/developers_best_practices/">Developer's Best Practices</a></li>
 <li><a  href="free_web_graphics.htm">Download Free Graphics</a></li>
@@ -1263,10 +1342,13 @@ You are  browsing the best resource for <em>Online Education.</em>
 </ul>
 <h4>Misc</h4>
 <ul class="menu" id="misc" data-href="misc_tutorials.htm">
+<li><a  href="/awselasticache/" title="Learn awselasticache">AWS ElastiCache</a></li>
 <li><a  href="/adobe_indesign_cc/" title="Learn Adobe Indesign">Adobe Indesign</a></li>
 <li><a  href="/adobe_robohelp/" title="Learn Adobe Robohelp">Adobe Robohelp</a></li>
 <li><a  href="/abbreviations/" title="Learn abbreviations">Abbreviations</a></li>
 <li><a  href="/bpel/" title="Learn BPEL">BPEL</a></li>
+<li><a  href="/blockchain/" title="Learn Blockchain">Blockchain</a></li>
+<li><a  href="/blue_prism/" title="Learn Blue Prism">Blue Prism</a></li>
 <li><a  href="/cloudrail/" title="Learn CloudRail">Learn CloudRail</a></li>
 <li><a  href="/dll/" title="Learn DLL">Learn DLL</a></li>
 <li><a  href="/drools/" title="Learn Drools">Learn Drools</a></li>
@@ -1283,8 +1365,10 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><a  href="/rss/" title="Learn RSS">Learn RSS</a></li>
 <li><a  href="/salesforce/" title="Learn Salesforce">Learn Salesforce</a></li>
 <li><a  href="/sublime_text/" title="Learn Sublime Text">Learn Sublime Text</a></li>
+<li><a  href="/tensorflow/" title="Learn TensorFlow">Learn TensorFlow</a></li>
 <li><a  href="/tex_commands/" title="Learn Tex Commands">Learn Tex Commands</a></li>
 <li><a  href="/tweetdeck/" title="Learn TweetDeck">Learn TweetDeck</a></li>
+<li><a  href="/uipath/" title="Learn UiPath">Learn UiPath</a></li>
 <li><a  href="/unity/" title="Learn Unity">Learn Unity</a></li>
 <li><a  href="/vim/" title="Learn Vim">Learn Vim</a></li>
 <li><a  href="/yaml/" title="Learn YAML">Learn YAML</a></li>
@@ -1349,7 +1433,9 @@ You are  browsing the best resource for <em>Online Education.</em>
 <li><i class="icon icon-caret-right"></i> <a href="/about/about_team.htm">Our Team</a></li>
 <li><i class="icon icon-caret-right"></i> <a href="/about/about_careers.htm">Careers</a></li>
 <li><i class="icon icon-caret-right"></i> <a href="/about/about_privacy.htm">Privacy Policy</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/about/about_cookies.htm">Cookies Policy</a></li>
 <li><i class="icon icon-caret-right"></i> <a href="/about/about_terms_of_use.htm">Terms of use</a></li>
+<li><i class="icon icon-caret-right"></i> <a href="/investors/">Investors</a></li>
 </ul>
 </div>
 <div class="col-md-2">
@@ -1389,19 +1475,19 @@ You are  browsing the best resource for <em>Online Education.</em>
 <div class="container">
 <div class="row">
 <div class="col-md-1">
-<a href="" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a>
+<a href="/" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a>
 </div>
 <div class="col-md-4 col-sm-12 col-xs-12">
    <nav id="sub-menu">
       <ul>
-         <li><a href="/about/faq.htm">FAQ's</a></li>
-         <li><a href="/about/about_privacy.htm#cookies">Cookies Policy</a></li>
+         <li><a href="/about/about_privacy.htm">Privacy Policy</a></li>
+         <li><a href="/about/about_cookies.htm">Cookies Policy</a></li>
          <li><a href="/about/contact_us.htm">Contact</a></li>
       </ul>
    </nav>
 </div>
 <div class="col-md-3 col-sm-12 col-xs-12">
-<p>&copy; Copyright 2018. All Rights Reserved.</p>
+<p>&copy; Copyright 2019. All Rights Reserved.</p>
 </div>
 <div class="col-md-4 col-sm-12 col-xs-12">
    <div class="news-group">
@@ -1417,7 +1503,6 @@ You are  browsing the best resource for <em>Online Education.</em>
 </footer>
 <link rel="stylesheet" href="/theme/css/menu-style-min.css?v=1">
 <script type="text/javascript" src="/theme/js/custom-min.js"></script>
-<script src="https://www.google-analytics.com/urchin.js">
 </script>
 <script type="text/javascript">
 _uacct = "UA-232293-6";
@@ -1425,6 +1510,30 @@ urchinTracker();
 $('.greyout').click(function(){
    $('.wrapLoader').show();
 });
+</script>
+<div id="privacy-banner">
+  <div>
+    <p>
+      We use cookies to provide and improve our services. By using our site, you consent to our Cookies Policy.
+      <a id="banner-accept" href="javascript:void(0)">Accept</a>
+      <a id="banner-learn" href="/about/about_cookies.htm" target="_blank">Learn more</a>
+    </p>
+  </div>
+</div>
+<script>
+// Banner Trigger if Not Closed
+if (!localStorage.bannerClosed) {
+  document.getElementById('privacy-banner').style.display = "inherit";
+} else {
+  document.getElementById('privacy-banner').style.display = "none";
+}
+document.getElementById('banner-accept').addEventListener('click', function() {
+  document.getElementById('privacy-banner').style.display = "none";
+  localStorage.bannerClosed = 'true';
+});
+if (navigator.userAgent.match(/Opera|OPR\//)) {
+  document.getElementById('privacy-banner').style.display = "inherit";
+}
 </script>
 </body>
 </html>
