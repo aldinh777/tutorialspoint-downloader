@@ -3,6 +3,11 @@ var fs = require('fs');
 
 var router = express.Router();
 
+router.get('/index.htm', (req, res, next) => {
+  req.url = '/';
+  next();
+});
+
 router.get('/', (req, res)=> {
   const dirContent = fs.readdirSync('www.tutorialspoint.com');
   if ( !fs.existsSync('completed-tutorials.json') ) {
