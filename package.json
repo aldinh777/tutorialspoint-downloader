@@ -1,10 +1,12 @@
 {
-  "name": "tutorialspoint",
-  "version": "1.1.0",
+  "name": "tutorialsdownloader",
+  "version": "1.2.0",
   "private": true,
   "scripts": {
-    "start": "DEBUG=tutorialsdownloader:* node bin/www",
-    "dev": "DEBUG=tutorialsdownloader:* nodemon -w bin/www -w app.js -w routes bin/www"
+    "start": "node bin/www",
+	"lin": "DEBUG=tutorialsdownloader node bin/www",
+    "win": "set DEBUG=tutorialsdownloader:* && node bin/www",
+    "dev": "nodemon -w bin/www -w app.js -w routes bin/www"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
