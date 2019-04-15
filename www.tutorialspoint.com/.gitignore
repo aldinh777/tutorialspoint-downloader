@@ -1,0 +1,11 @@
+**
+
+!.gitignore
+!theme/
+!theme/**
+!scripts/
+!scripts/**
+!images/
+!images/**
+!green/
+!green/**
